@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  direction: rtl;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+  color: #4b0082;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.buttons button {
+  margin-bottom: 5px;
+}
+
+/* الوضع الليلي */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* تصميم الهاتف */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}

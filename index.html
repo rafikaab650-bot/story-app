@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تطبيق كتابة القصص</title>
+
+  <!-- ربط ملف CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- دعم الهاتف -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ربط manifest (للتطبيق) -->
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <h1>✍️ تطبيق كتابة القصص</h1>
+
+    <!-- اسم القصة -->
+    <label>اسم القصة:</label>
+    <input id="storyTitle" type="text" placeholder="اكتب اسم القصة">
+
+    <!-- اختيار الخط -->
+    <label>نوع الخط:</label>
+    <input type="text" id="fontSelect" placeholder="مثلا: Arial">
+
+    <!-- حجم الخط -->
+    <label>حجم الخط:</label>
+    <select id="fontSizeSelect">
+      <option value="14px">14</option>
+      <option value="16px" selected>16</option>
+      <option value="18px">18</option>
+      <option value="20px">20</option>
+      <option value="24px">24</option>
+    </select>
+
+    <!-- لون الخلفية -->
+    <label>لون الخلفية:</label>
+    <input type="color" id="bgColor" value="#ffffff">
+
+    <!-- صورة الخلفية -->
+    <label>اختر صورة خلفية:</label>
+    <input type="file" id="bgImage" accept="image/*">
+
+    <!-- القصص المحفوظة -->
+    <label>القصص المحفوظة:</label>
+    <select id="savedStories">
+      <option value="">-- القصص المحفوظة --</option>
+    </select>
+
+    <!-- زر تصدير PDF -->
+    <button id="exportPDF">تصدير PDF</button>
+
+    <!-- مربع كتابة القصة -->
+    <textarea
+      id="storyText"
+      placeholder="ابدأ بكتابة قصتك هنا..."
+      rows="10">
+    </textarea>
+
+    <!-- عداد الكلمات -->
+    <p id="counter">عدد الكلمات: 0</p>
+
+    <!-- الأزرار -->
+    <div class="buttons">
+      <button onclick="toggleDarkMode()">وضع ليلي</button>
+
+      <button onclick="saveStory()" style="background: green; color: white;">
+        حفظ
+      </button>
+
+      <button onclick="restoreText()" style="background: blue; color: white;">
+        إرجاع النص
+      </button>
+
+      <button onclick="hideText()" style="background: red; color: white;">
+        إخفاء النص
+      </button>
+
+      <button onclick="deleteStory()" style="background: darkviolet; color: white;">
+        حذف القصة
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ربط ملف JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
